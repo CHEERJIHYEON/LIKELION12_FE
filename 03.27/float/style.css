@@ -1,0 +1,17 @@
+.child1 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+.child2 {
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+}
+
+.child3 {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}

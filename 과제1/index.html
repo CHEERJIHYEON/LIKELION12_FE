@@ -1,81 +1,23 @@
 <!--head는 보여지지 않는다-->
+<!-- style: 꾸미는 태그 -->
+<!-- link는 한 줄로 끝남 닫는 태그 없음 -->
 <head>
-  <!-- style: 꾸미는 태그 -->
-  <style>
-    div {
-      color: blue;
-    }
-
-    p {
-      color: #800080;
-    }
-
-    /* done이라는 class 가진 애한테 style저장해라 */
-    .done {
-      text-decoration: line-through;
-    }
-  </style>
+  <link href="index.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
 </head>
 
 <body>
   <h1>투두리스트</h1>
-  <div>할일들</div>
-  <!-- 식별자 붙음 -->
-  <p id="ㅁㅁ" class="done">빨래하기</p>
-  <p id="청소하기">청소하기</p>
-  <p id="밥먹기">밥먹기</p>
+  <div id="할일들">할일들</div>
+
+  <input id="입력창" />
+  <button id="추가버튼">추가하기</button>
+  <button id="초기화">초기화</button>
 </body>
 
-<script>
-  //p태그 중에 특정한 한 놈을 갖고 오는 것, id는 #으로 갖고 온다
-  //변수 p1에 id = "빨래하기" 를 담기
-  const p1 = document.querySelector("#ㅁㅁ");
-  const p2 = document.querySelector("#청소하기");
-  const p3 = document.querySelector("#밥먹기");
-
-  //addEventListener의 대상을 p1으로 설정
-  //e는 클릭된 녀석을 의미, 지금 여기선 "빨래하기"다
-  p1.addEventListener("click", (e) => {
-    //이 공간이 바로
-    //클릭했을때 할 일들을 정의하는 공간
-    //예: 줄 긋기, 줄 취소하기
-    //alert();
-
-    //조건문 사용
-    if (e.target.className === "done") {
-      e.target.className = "";
-    } else {
-      e.target.className = "done";
-    }
-  });
-
-  p2.addEventListener("click", (e) => {
-    //이 공간이 바로
-    //클릭했을때 할 일들을 정의하는 공간
-    //예: 줄 긋기, 줄 취소하기
-    //alert();
-
-    //조건문 사용
-    if (e.target.className === "done") {
-      e.target.className = "";
-    } else {
-      e.target.className = "done";
-    }
-  });
-
-  p3.addEventListener("click", (e) => {
-    //이 공간이 바로
-    //클릭했을때 할 일들을 정의하는 공간
-    //예: 줄 긋기, 줄 취소하기
-    //alert();
-
-    //조건문 사용
-    if (e.target.className === "done") {
-      e.target.className = "";
-    } else {
-      e.target.className = "done";
-    }
-  });
-</script>
+<script src="index.js"></script>
 
 <!-- 클릭 === 이벤트, 이벤트 처리는 js필요  -->
